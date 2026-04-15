@@ -18,10 +18,9 @@ This project analyzes 12 months of Divvy bike-share trip data (Nov 2024 – Oct 
 
 See [`docs/REPORT.md`](docs/REPORT.md) for the full write-up.
 
-This repo includes the report, reproducible R pipeline, generated summary CSVs,
-and final chart PNGs. The full cleaned dataset artifact
-`data/processed/trips_clean.rds` is regenerated locally because it is too large
-to keep in the repository.
+This source export includes the report and reproducible R pipeline. Generated
+summary tables in `data/processed/` and chart PNGs in `output/figures/` are
+created locally when you run the pipeline.
 
 ---
 

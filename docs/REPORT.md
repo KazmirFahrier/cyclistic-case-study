@@ -55,9 +55,8 @@ All processing is in R using the tidyverse. The full pipeline lives in [`R/`](..
 
 Roughly 1–2% of records are dropped by these filters, which matches the cleaning loss reported in similar published Divvy analyses.
 
-The generated chart PNGs referenced below are included in the repository. The
-full cleaned dataset artifact `data/processed/trips_clean.rds` is regenerated
-locally because it is too large to store in Git.
+This source export does not include generated chart PNGs. The figure files
+referenced below are produced by `R/04_visualize.R` after running the pipeline.
 
 ---
 
@@ -67,7 +66,7 @@ locally because it is too large to store in Git.
 
 Members average around **12 minutes** per ride; casual riders average **22+ minutes**. The gap holds every day of the week and widens on weekends. This is the single most important behavioral signal in the dataset: it strongly suggests members use bikes as a **transportation tool** while casuals use them as a **leisure activity**.
 
-![Average ride length by day](../output/figures/02_avg_length_by_dow.png)
+Figure output: `output/figures/02_avg_length_by_dow.png`
 
 ### Finding 2 — Members commute, casuals cruise
 
@@ -76,29 +75,29 @@ The hourly pattern makes the use-case difference unmistakable:
 - **Members** show a classic two-peak commute curve at **8 AM** and **5 PM**.
 - **Casuals** show a single broad afternoon hump centered around **2–4 PM**.
 
-![Rides by hour of day](../output/figures/03_rides_by_hour.png)
+Figure output: `output/figures/03_rides_by_hour.png`
 
 By day of week, members dominate Monday–Friday; casual ride volume jumps on Saturday and Sunday and frequently exceeds member volume on those days.
 
-![Rides by day of week](../output/figures/01_rides_by_dow.png)
+Figure output: `output/figures/01_rides_by_dow.png`
 
 ### Finding 3 — Both groups are seasonal, but casuals swing harder
 
 Both segments peak in summer (June–August) and bottom out in January–February. The casual-rider curve is much steeper — roughly a 6–8× swing from winter to summer, versus 3–4× for members. This means **summer is the high-leverage conversion window**.
 
-![Monthly rides](../output/figures/04_rides_by_month.png)
+Figure output: `output/figures/04_rides_by_month.png`
 
 ### Finding 4 — Casual rides cluster at lakefront and tourist stations
 
 The top 15 casual start stations are dominated by Streeter Dr & Grand Ave, DuSable Lake Shore Dr stations, Millennium Park, and Navy Pier — all leisure/tourist locations. Member rides are far more evenly distributed across the network.
 
-![Top casual stations](../output/figures/06_top_casual_stations.png)
+Figure output: `output/figures/06_top_casual_stations.png`
 
 ### Finding 5 — Bike-type preferences differ modestly
 
 Casual riders are slightly more likely than members to choose electric bikes, and a small share of casual rides use the docked-bike option that members rarely select. Useful for product/inventory teams but not the primary marketing lever.
 
-![Bike type](../output/figures/05_bike_type.png)
+Figure output: `output/figures/05_bike_type.png`
 
 ---
 
@@ -146,4 +145,4 @@ Casual ridership roughly triples between April and July. A casual rider who conv
 
 ---
 
-*Code, charts, and reproducible pipeline:* [github.com/KazmirFahrier/cyclistic-case-study](https://github.com/KazmirFahrier)
+*Code, charts, and reproducible pipeline:* [github.com/KazmirFahrier/cyclistic-case-study](https://github.com/KazmirFahrier/cyclistic-case-study)
