@@ -9,6 +9,9 @@
 data/raw/
 *.zip
 
+# Large intermediate artifacts — regenerate locally
+data/processed/*.rds
+
 # OS
 .DS_Store
 Thumbs.db
